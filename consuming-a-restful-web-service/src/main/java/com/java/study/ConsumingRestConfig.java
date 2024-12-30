@@ -1,7 +1,7 @@
 package com.java.study;
 
 import com.java.study.api.ApiTemplate;
-import com.java.study.api.RestApiTemplate;
+import com.java.study.api.WebClientApiTemplate;
 import com.java.study.condition.NotTestProfileCondition;
 import com.java.study.quote.Quote;
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +18,7 @@ public class ConsumingRestConfig {
 
     @Bean
     public ApiTemplate apiTemplate() {
-        return new RestApiTemplate();
+        return new WebClientApiTemplate();
     }
 
     @Bean
