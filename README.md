@@ -23,3 +23,6 @@
 |Slf4j와 Lombok의 활용 및 로깅 학습|`scheduling-tasks/docs/logging.md`|
 |Spring Scheduling의 @EnableScheduling과 @Scheduled 활용 정리|`scheduling-tasks/docs/schedule.md`|
 |Spring Boot Test와 Mockito 활용, Awaitility로 비동기 테스트 구현|`scheduling-tasks/docs/test.md`|
+|Spring에서 API를 요청하는 방법과 Connection Pool 활용 정리|`consuming-a-restful-web-service/docs/api.md`|
+|@JsonIgnoreProperties 정리|`consuming-a-restful-web-service/docs/json-ignore-properties.md`|
+|@Profile 개념과 @Conditional로 커스텀 활용 정리|`consuming-a-restful-web-service/docs/profile.md`|
