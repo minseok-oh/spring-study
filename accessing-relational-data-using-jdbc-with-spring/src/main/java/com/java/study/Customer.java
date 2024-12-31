@@ -1,6 +1,12 @@
 package com.java.study;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
+
+@Table("Customer")
 public class Customer {
+
+    @Id
     private long id;
     private String firstName, lastName;
 
