@@ -1,9 +1,9 @@
 package com.java.study.context;
 
-import com.java.study.Customer;
+import com.java.study.customer.Customer;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.InitializingBean;
@@ -20,18 +20,17 @@ public class DatabaseCleaner implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        tableNames.add(Customer.class.getName());
+        tableNames.add(Customer.class.getSimpleName());
     }
 
     public void clear() {
         try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASSWORD)) {
+            String truncateQuery = "TRUNCATE TABLE ";
+            Statement statement = connection.createStatement();
 
-            PreparedStatement preparedStatement = connection.prepareStatement("TRUNCATE TABLE ?");
             for (String table: tableNames) {
-                preparedStatement.setString(1, table);
-                preparedStatement.execute();
+                statement.execute(truncateQuery + table);
             }
-            connection.commit();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
