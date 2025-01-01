@@ -1,5 +1,6 @@
-package com.java.study;
+package com.java.study.config;
 
+import com.zaxxer.hikari.HikariDataSource;
 import java.io.File;
 import java.lang.reflect.Field;
 import java.net.URL;
@@ -8,6 +9,7 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import javax.sql.DataSource;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,6 +24,16 @@ public class DatabaseConfig {
     private static final String PASSWORD = "";
 
     @Bean
+    public DataSource dataSource() {
+        HikariDataSource dataSource = new HikariDataSource();
+        dataSource.setDriverClassName("org.h2.Driver");
+        dataSource.setJdbcUrl("jdbc:h2:mem:testdb");
+        dataSource.setUsername("sa");
+        dataSource.setPassword("");
+        return dataSource;
+    }
+
+    @Bean
     public CommandLineRunner initialize() {
         return args -> {
             try (
@@ -33,8 +45,8 @@ public class DatabaseConfig {
 
                 List<Class<?>> tableAnnotatedClasses = getTableAnnotatedClasses();
                 for (Class<?> clazz : tableAnnotatedClasses) {
-                    statement.execute(String.format(dropStatement, clazz.getSimpleName()));
-                    statement.execute(String.format(createStatement, clazz.getSimpleName(),
+                    statement.execute(String.format(dropStatement, clazz.getSimpleName().toUpperCase()));
+                    statement.execute(String.format(createStatement, clazz.getSimpleName().toUpperCase(),
                             getCreateFieldsQuery(clazz.getDeclaredFields())));
                 }
 
@@ -85,8 +97,8 @@ public class DatabaseConfig {
             Field field = fields[i];
             builder.append(field.getName());
 
-            if (field.getType() == long.class) {
-                builder.append(" BIGINT");
+            if (field.getType() == Long.class) {
+                builder.append(" BIGINT AUTO_INCREMENT");
             } else if (field.getType() == String.class) {
                 builder.append(" VARCHAR(255)");
             }
