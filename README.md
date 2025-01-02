@@ -11,6 +11,8 @@
 |-------|---|-----|
 |Building a RESTful Web Service|@RequestParam을 통해 GET 요청 받아 반환하기|[링크](https://spring.io/guides/gs/rest-service)|
 |Scheduling Tasks|작업을 스케쥴링하여 5초마다 실행하기|[링크](https://spring.io/guides/gs/scheduling-tasks)|
+|Consuming a RESTful Web Service|API로 데이터 받아오기|[링크](https://spring.io/guides/gs/consuming-rest)|
+|Accessing Relational Data using JDBC with Spring|JDBC로 데이터베이스 값 가져오기|[링크](https://spring.io/guides/gs/relational-data-access)|
 
 # 🍃 학습 내용 정리
 |설명|위치|
@@ -26,3 +28,6 @@
 |Spring에서 API를 요청하는 방법과 Connection Pool 활용 정리|`consuming-a-restful-web-service/docs/api.md`|
 |@JsonIgnoreProperties 정리|`consuming-a-restful-web-service/docs/json-ignore-properties.md`|
 |@Profile 개념과 @Conditional로 커스텀 활용 정리|`consuming-a-restful-web-service/docs/profile.md`|
+|JDBC를 사용한 여러가지 DB 접근 방법 정리|`accessing-relational-data-using-jdbc-with-spring/docs/data-access.md`|
+|데이터베이스 클리너 활용 방법 학습|`accessing-relational-data-using-jdbc-with-spring/docs/db-cleaner.md`|
+|Test 환경에서의 Reflection 사용법 문제 해결|`accessing-relational-data-using-jdbc-with-spring/docs/trouble-shooting.md`|
