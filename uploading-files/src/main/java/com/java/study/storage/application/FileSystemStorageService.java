@@ -1,9 +1,9 @@
 package com.java.study.storage.application;
 
-import com.java.study.storage.exception.StorageException;
-import com.java.study.storage.exception.StorageFileNotFoundException;
 import com.java.study.storage.StorageProperties;
 import com.java.study.storage.StorageService;
+import com.java.study.storage.exception.StorageException;
+import com.java.study.storage.exception.StorageFileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
@@ -13,6 +13,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.stream.Stream;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
@@ -20,6 +21,7 @@ import org.springframework.util.FileSystemUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 @Service
+@Profile("default")
 public class FileSystemStorageService implements StorageService {
 
     private final Path rootLocation;
