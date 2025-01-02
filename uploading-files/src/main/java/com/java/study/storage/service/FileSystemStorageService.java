@@ -1,5 +1,9 @@
-package com.java.study.storage;
+package com.java.study.storage.service;
 
+import com.java.study.storage.exception.StorageException;
+import com.java.study.storage.exception.StorageFileNotFoundException;
+import com.java.study.storage.StorageProperties;
+import com.java.study.storage.StorageService;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
@@ -16,12 +20,12 @@ import org.springframework.util.FileSystemUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 @Service
-public class FileSystemStoargeService implements StorageService {
+public class FileSystemStorageService implements StorageService {
 
     private final Path rootLocation;
 
     @Autowired
-    public FileSystemStoargeService(StorageProperties properties) {
+    public FileSystemStorageService(StorageProperties properties) {
         if (properties.getLocation().trim().length() == 0) {
             throw new StorageException("File upload location can not be Empty.");
         }

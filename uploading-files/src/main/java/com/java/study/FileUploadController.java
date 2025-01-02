@@ -1,6 +1,6 @@
 package com.java.study;
 
-import com.java.study.storage.StorageFileNotFoundException;
+import com.java.study.storage.exception.StorageFileNotFoundException;
 import com.java.study.storage.StorageService;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
