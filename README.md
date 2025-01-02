@@ -13,6 +13,7 @@
 |Scheduling Tasks|작업을 스케쥴링하여 5초마다 실행하기|[링크](https://spring.io/guides/gs/scheduling-tasks)|
 |Consuming a RESTful Web Service|API로 데이터 받아오기|[링크](https://spring.io/guides/gs/consuming-rest)|
 |Accessing Relational Data using JDBC with Spring|JDBC로 데이터베이스 값 가져오기|[링크](https://spring.io/guides/gs/relational-data-access)|
+|Uploading Files|파일 업로드와 다운로드를 하는 서버 구현하기|[링크](https://spring.io/guides/gs/uploading-files)|
 
 # 🍃 학습 내용 정리
 |설명|위치|
@@ -31,3 +32,7 @@
 |JDBC를 사용한 여러가지 DB 접근 방법 정리|`accessing-relational-data-using-jdbc-with-spring/docs/data-access.md`|
 |데이터베이스 클리너 활용 방법 학습|`accessing-relational-data-using-jdbc-with-spring/docs/db-cleaner.md`|
 |Test 환경에서의 Reflection 사용법 문제 해결|`accessing-relational-data-using-jdbc-with-spring/docs/trouble-shooting.md`|
+|API를 테스트하기 위한 @WebMvcTest 사용법 학습|`uploading-files/docs/api-test.md`|
+|글로벌 예외 처리를 위한 핸들러 구현 정리|`uploading-files/docs/exception-handler.md`|
+|파일 업로드 관리를 위한 3가지 구조 정리|`uploading-files/docs/file-management.md`|
+|파일 전송을 위한 멀티파트 학습|`uploading-files/docs/multi-part.md`|
