@@ -1,4 +1,4 @@
-package com.java.study.storage.service;
+package com.java.study.storage.application;
 
 import com.java.study.storage.exception.StorageException;
 import com.java.study.storage.exception.StorageFileNotFoundException;
