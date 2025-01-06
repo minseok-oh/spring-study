@@ -14,6 +14,7 @@
 |Consuming a RESTful Web Service|API로 데이터 받아오기|[링크](https://spring.io/guides/gs/consuming-rest)|
 |Accessing Relational Data using JDBC with Spring|JDBC로 데이터베이스 값 가져오기|[링크](https://spring.io/guides/gs/relational-data-access)|
 |Uploading Files|파일 업로드와 다운로드를 하는 서버 구현하기|[링크](https://spring.io/guides/gs/uploading-files)|
+|Authenticating a User with LDAP|인증을 위한 LDAP 서버 구현하기|[링크](https://spring.io/guides/gs/authenticating-ldap)|
 
 # 🍃 학습 내용 정리
 |설명|위치|
@@ -36,3 +37,6 @@
 |글로벌 예외 처리를 위한 핸들러 구현 정리|`uploading-files/docs/exception-handler.md`|
 |파일 업로드 관리를 위한 3가지 구조 정리|`uploading-files/docs/file-management.md`|
 |파일 전송을 위한 멀티파트 학습|`uploading-files/docs/multi-part.md`|
+|Bcrypt을 구현하는 해시와 솔트에 대한 정리|`authenticating-a-user-with-ldap/docs/bcrypt.md`|
+|LDAP에 대한 조사 및 기본 로그인과의 차이점 정리|`authenticating-a-user-with-ldap/docs/ldap.md`|
+|FilterChain 학습 및 Interceptor, AOP와의 비교 정리|`authenticating-a-user-with-ldap/docs/spring-security.md`|
